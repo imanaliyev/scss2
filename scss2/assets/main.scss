@@ -1,0 +1,32 @@
+@import "./base/reset";
+
+@mixin buton ( $bgcolor:orange, $color:black,$width:100px) {
+    width: $width;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bgcolor;;
+    color: $color;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 20px auto;
+    
+    
+    
+}
+.button {
+    @include buton (rgb(117, 32, 32),yellow,90px);
+    
+}
+.button2{
+    @include buton (green,hotpink,190px);
+    
+}
+%skytone {
+    background: rgb(14,173,149);
+    background: linear-gradient(90deg, rgba(14,173,149,1) 26%, rgba(12,0,255,0.4206057422969187) 69%); 
+}
+body{
+    @extend %skytone
+}
